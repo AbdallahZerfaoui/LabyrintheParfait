@@ -1,0 +1,13 @@
+{
+    "window": {
+        "title": "MonLabyrinthe",
+        "width_factor": 4,
+        "height_factor": 2,
+        "padding_x": 10,
+        "padding_y": 10
+    },
+    "grid": {
+        "default_size": [20, 20],
+		"grid_file": "labyrinth.txt"
+    }
+}

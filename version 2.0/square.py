@@ -1,4 +1,3 @@
-
 class square(object):
     def __init__(self):
         self.UpperWall = 1

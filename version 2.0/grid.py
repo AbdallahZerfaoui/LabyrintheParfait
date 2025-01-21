@@ -1,4 +1,3 @@
-
 class grid(object):
     def __init__(self, col=1, row=1, none=None):
 
@@ -43,7 +42,6 @@ class grid(object):
         return "%s%s%s" % (seprow, seprow.join(rows), seprow)
 
     def clone(self):
-
         return eval(repr(self), {type(self).__name__: type(self)})
 
     def reset(self):
@@ -54,7 +52,7 @@ class grid(object):
     def display(self):
         chaine = ""
         (n, p) = self.size
-        for i in range(n):  # cas general
+        for i in range(n):  # general case
             for j in range(p):
                 if self()[i][j].UpperWall == 1:
                     chaine += "+---"

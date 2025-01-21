@@ -1,4 +1,3 @@
-
 class memory:
     def __init__(self):
 
@@ -6,19 +5,19 @@ class memory:
         self.state = List
 
     def is_empty(self):
-        if len(self.state)==0:
+        if len(self.state) == 0:
             return True
         else:
             return False
-       
-    def store_element(self,element):
+
+    def store_element(self, element):
         self.state.append(element)
 
     def get_last_state(self):
         if not self.is_empty():
-            return self.state[len(self.state)-1]
+            return self.state[len(self.state) - 1]
         else:
-            print ("empty list")
+            print("empty list")
 
     def pop_last_state(self):
         if not self.is_empty:

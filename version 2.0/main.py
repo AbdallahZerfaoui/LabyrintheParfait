@@ -15,12 +15,12 @@ from memory import *
 from square import *
 from taupe import *
 from grid import *
+from getters import *
 from utils import *
 import tkinter
 
 if __name__ == "__main__":
-    n = 20
-    p = 20
+    n, p = getDimensions("config.json")
     Grid = grid(n, p)
     for i in range(n):
         for j in range(p):
@@ -28,5 +28,5 @@ if __name__ == "__main__":
             Grid()[i][j].position = (i, j)
     Taupe = taupe()
     Taupe.explore(Grid)
-    BreakWall(Grid, (2, 1))         # the entrance
-    BreakWall(Grid, (2 * n, p + 1)) # the exit
+    BreakWall(Grid, (2, 1))  # the entrance
+    BreakWall(Grid, (2 * n, p + 1))  # the exit

@@ -1,6 +1,8 @@
 from memory import memory
+from getters import getGridFile
 from random import choice
 from utils import *
+
 
 class taupe(object):
     def __init__(self):
@@ -54,7 +56,7 @@ class taupe(object):
                     done = True
                     BreakWall(Grid, (2, 1))
                     BreakWall(Grid, (2 * n, p + 1))
-                    CreateFile(Grid, "Labyrinthe.txt")
+                    CreateFile(Grid, getGridFile("config.json"))
                     Window(Grid)
             else:
 

@@ -1,4 +1,5 @@
 import tkinter
+from getters import getTitle
 
 
 def Window(Grid):
@@ -18,7 +19,7 @@ def Window(Grid):
     text_widget = tkinter.Text(root, width=4 * p + 1, height=2 * n + 1)
     text_widget.insert(tkinter.END, Grid.display())
     text_widget.pack(side=tkinter.RIGHT, padx=10, pady=10)
-    root.title("MonLabyrinthe")
+    root.title(getTitle("config.json"))
     root.update_idletasks()
     root.mainloop()
 

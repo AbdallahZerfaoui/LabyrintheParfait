@@ -32,3 +32,18 @@ def getGridFile(config_file: str) -> str:
         config = json.load(config_file)
     file_name = config["grid"]["grid_file"]
     return file_name
+
+def getTitle(config_file: str) -> str:
+	"""
+	Returns the title of the game stored in the config_file.
+
+	Parameters:
+			file (str): The file path where the grid representation is stored.
+
+	Returns:
+			str: The title of the game.
+	"""
+	with open(config_file, "r") as config_file:
+		config = json.load(config_file)
+	title = config["window"]["title"]
+	return title
